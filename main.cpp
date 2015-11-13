@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <math.h>
-#include "GaussianQuad.h"
+#include "pid.h"
 using namespace std;
 
 double f(double x)
@@ -25,7 +25,6 @@ int main()
 		y[i] = f(t[i]);
 	}
 	gq.calcPolynomial(t,y);
-	double k = dt/2.0;
 	printf("%10.20f\n",gq.eval(t[N-2], t[N-1]));
 	printf("%10.20f\n",I(t[N-1]) - I(t[N-2]));
 	return 0;

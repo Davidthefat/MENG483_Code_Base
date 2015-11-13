@@ -58,6 +58,5 @@ void GaussianQuad::calcPolynomial(double *x, double *f)
 
 double GaussianQuad::evalInt(double t)
 {
-        //Returns S_j-1(x) as this function will only be used for Adams-Bashforth Method
         return a[IN-2] + (t-xj)*b[IN-2] + (t-xj)*(t-xj)*c[IN-2] + (t-xj)*(t-xj)*(t-xj)*d[IN-2];
 }
